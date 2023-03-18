@@ -11,8 +11,7 @@
 #define TXT 0
 #define NUM 1
 #define FNK 2
-#define CNT 4
-#define NAV 5
+#define NAV 3
 / {
         keymap {
                 compatible = "zmk,keymap";
@@ -20,7 +19,7 @@
                 txt_layer {
                         bindings = <
 &none  &kp Q        &kp W     &kp E       &kp R      &kp T         &kp Y     &kp U      &kp I       &kp O      &kp P           &none   
-&none  &mt LCTRL A  &kp S     &mt LALT D  &lt NUM F  &kp G         &kp H     &lt FNK J  &mt RALT K  &kp L      &mt RCTRL SEMI  &none  
+&none  &mt LCTRL A  &lt NAV S &mt LCMD D  &lt NUM F  &kp G         &kp H     &lt FNK J  &kp K       &kp L      &mt RCTRL SEMI  &none  
 &none  &mt LSHFT Z  &kp X     &kp C       &kp V      &kp B         &kp N     &kp M      &kp COMMA   &kp DOT    &mt RSHFT FSLH  &none 
                               &kp LALT    &kp TAB    &kp SPACE     &kp RET   &kp BSPC   &kp ESC
                         >;
@@ -32,7 +31,6 @@
 &none  &trans       &trans    &trans    &trans     &trans        &kp N6    &kp N7     &kp N8     &kp N9     &kp N0          &none       
 &none  &trans       &trans    &trans    &trans     &trans        &kp BSLH  &kp LBKT   &kp RBKT   &kp MINUS  &kp EQUAL       &none       
                               &trans    &trans     &trans        &trans    &trans     &trans      
-                        
                         >;
                 };
 
@@ -42,6 +40,14 @@
 &none  &kp F6    &kp F7     &kp F8     &kp F9     &kp F10    &trans       &trans    &trans    &trans     &trans             &none       
 &none  &kp F11   &kp F12    &kp CAPS   &kp APOS   &kp GRAVE  &trans       &trans    &trans    &trans     &trans             &none       
                               &trans    &trans     &trans        &trans    &trans     &trans      
+                        >;
+                };
+                nav_layer {
+                        bindings = <
+&none  &trans       &trans    &trans    &trans     &trans        &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp C_VOL_UP    &none       
+&none  &trans       &trans    &trans    &trans     &trans        &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp C_VOL_DN    &none       
+&none  &trans       &trans    &trans    &trans     &trans        &kp C_PREV &kp C_PP   &kp C_NEXT &kp C_STOP &kp C_MUTE      &none       
+                              &trans    &trans     &trans        &trans     &trans     &trans      
                         >;
                 };
 
