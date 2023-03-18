@@ -10,8 +10,7 @@
 // Layers
 #define TXT 0
 #define NUM 1
-#define SYM 2
-#define FNC 3
+#define FNK 2
 #define CNT 4
 #define NAV 5
 / {
@@ -20,34 +19,29 @@
 
                 txt_layer {
                         bindings = <
-&none  &kp Q     &kp W     &kp E     &kp R     &kp T         &kp Y     &kp U      &kp I      &kp O      &kp P     &none   
-&none  &kp A     &kp S     &kp D     &lt NUM F     &kp G         &kp H     &kp J      &kp K      &kp L      &kp SEMI  &none  
-&none  &mt LSHFT Z     &kp X     &kp C     &kp V     &kp B         &kp N     &kp M      &kp COMMA  &kp DOT    &mt RSHFT FSLH  &none 
-                           &kp LALT  &kp TAB   &kp SPACE     &kp RET   &kp BSPC   &kp ESC
+&none  &kp Q        &kp W     &kp E       &kp R      &kp T         &kp Y     &kp U      &kp I       &kp O      &kp P           &none   
+&none  &mt LCTRL A  &kp S     &mt LALT D  &lt NUM F  &kp G         &kp H     &lt FNK J  &mt RALT K  &kp L      &mt RCTRL SEMI  &none  
+&none  &mt LSHFT Z  &kp X     &kp C       &kp V      &kp B         &kp N     &kp M      &kp COMMA   &kp DOT    &mt RSHFT FSLH  &none 
+                              &kp LALT    &kp TAB    &kp SPACE     &kp RET   &kp BSPC   &kp ESC
                         >;
                 };
 
                 num_layer {
                         bindings = <
- &none &trans &trans &trans &trans &trans &kp N1 &kp N2 &kp N3 &kp N4 &kp N5 &none       
- &none &trans &trans &trans &trans &trans &kp N6 &kp N7 &kp N8 &kp N9 &kp N0 &none       
- &none &trans &trans &trans &trans &trans &kp BSLH &kp LBKT &kp RBKT &kp MINUS &kp EQUAL &none       
- &trans &trans &trans &trans &trans &trans      
+&none  &trans       &trans    &trans    &trans     &trans        &kp N1    &kp N2     &kp N3     &kp N4     &kp N5          &none       
+&none  &trans       &trans    &trans    &trans     &trans        &kp N6    &kp N7     &kp N8     &kp N9     &kp N0          &none       
+&none  &trans       &trans    &trans    &trans     &trans        &kp BSLH  &kp LBKT   &kp RBKT   &kp MINUS  &kp EQUAL       &none       
+                              &trans    &trans     &trans        &trans    &trans     &trans      
                         
                         >;
                 };
 
-                orig_num_layer {
-// -----------------------------------------------------------------------------------------
-// |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | BKSP |
-// | BTCLR| BT1 | BT2 | BT3 | BT4 | BT5 |   | LFT | DWN |  UP | RGT |     |      |
-// | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
-//                    | GUI |     | SPC |   | ENT |     | ALT |
+                fnk_layer {
                         bindings = <
-   &kp TAB    &kp N1       &kp N2       &kp N3       &kp N4       &kp N5         &kp N6   &kp N7   &kp N8 &kp N9    &kp N0 &kp BSPC
-   &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4   &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-   &kp LSHFT  &trans       &trans       &trans       &trans       &trans         &trans   &trans   &trans &trans    &trans &trans
-                          	        &kp LGUI     &trans       &kp SPACE      &kp RET  &trans   &kp RALT
+&none  &kp F1    &kp F2     &kp F3     &kp F4     &kp F5     &trans       &trans    &trans    &trans     &trans             &none       
+&none  &kp F6    &kp F7     &kp F8     &kp F9     &kp F10    &trans       &trans    &trans    &trans     &trans             &none       
+&none  &kp F11   &kp F12    &kp CAPS   &kp APOS   &kp GRAVE  &trans       &trans    &trans    &trans     &trans             &none       
+                              &trans    &trans     &trans        &trans    &trans     &trans      
                         >;
                 };
 
