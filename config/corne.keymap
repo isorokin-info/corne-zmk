@@ -9,22 +9,32 @@
 #include <dt-bindings/zmk/outputs.h>
 
 // Layers
-#define TXT 0
-#define NUM 1
-#define FNK 2
-#define NAV 3
-#define CTR 4
+#define QWE 0
+#define CLM 1
+#define NUM 2
+#define FNK 3
+#define NAV 4
+#define CTR 5
 
 / {
         keymap {
                 compatible = "zmk,keymap";
 
-                txt_layer {
+                qwe_layer {
                         bindings = <
 &none  &kp Q        &kp W      &kp E       &kp R      &kp T         &kp Y     &kp U      &kp I       &kp O      &kp P           &none   
 &none  &mt LCTRL A  &mt LCMD S &mt LSHFT D &lt NUM F  &kp G         &kp H     &lt FNK J  &mt LSHFT K &mt LCMD L &mt LCTRL SEMI  &none  
-&none  &lt NAV Z    &kp X      &kp C       &kp V      &kp B         &kp N     &kp M      &kp COMMA   &kp DOT    &kp FSLH        &none 
-                               &kp LALT    &kp TAB    &kp SPACE     &kp RET   &mt DEL BSPC  &kp ESC
+&none  &lt NAV Z    &kp X      &kp C       &kp V      &kp B         &kp N     &kp M      &kp COMMA   &kp DOT    &lt CTR FSLH        &none 
+                               &kp ESC     &kp LALT   &kp SPACE     &kp RET   &mt DEL BSPC  &kp TAB    
+                        >;
+                };
+
+                clm_layer {
+                        bindings = <
+&none  &kp Q        &kp W      &kp F       &kp P      &kp B         &kp J     &kp L      &kp U       &kp Y      &kp SEMI           &none   
+&none  &mt LCTRL A  &mt LCMD R &mt LSHFT S &lt NUM T  &kp G         &kp M     &lt FNK N  &mt LSHFT E &mt LCMD I &mt LCTRL O  &none  
+&none  &lt NAV Z    &kp X      &kp C       &kp D      &kp V         &kp K     &kp H      &kp COMMA   &kp DOT    &lt CTR FSLH        &none 
+                               &kp ESC     &kp LALT   &kp SPACE     &kp RET   &mt DEL BSPC  &kp TAB    
                         >;
                 };
 
@@ -56,8 +66,8 @@
                 ctr_layer {
                         bindings = <
 &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4     &trans       &trans    &trans    &trans     &trans             &none       
-&none  &bt BT_CLR    &out OUT_TOG  &trans        &trans        &trans           &trans       &trans    &trans    &trans     &trans             &none       
-&none  &kp PSCRN     &trans        &trans        &trans        &trans           &trans       &trans    &trans    &trans     &trans             &none       
+&none  &bt BT_CLR    &out OUT_TOG  &trans        &trans        &tog QWE         &trans       &trans    &trans    &trans     &trans             &none       
+&none  &kp PSCRN     &trans        &trans        &trans        &tog CLM         &trans       &trans    &trans    &trans     &trans             &none       
                                    &trans        &trans        &trans           &trans       &trans    &trans      
                         >;
                 };
