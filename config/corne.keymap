@@ -10,9 +10,8 @@
 
 // Layers
 #define QWE 0
-#define CLM 1
-#define NUM 2
-#define NAV 3
+#define NUM 1
+#define NAV 2
 
 / {
         keymap {
@@ -24,15 +23,6 @@
 &none  &kp A        &kp S      &kp D       &kp F      &kp G         &kp H     &kp J      &kp K       &kp L      &kp SEMI        &none  
 &none  &kp Z        &kp X      &kp C       &kp V      &kp B         &kp N     &kp M      &kp COMMA   &kp DOT    &kp FSLH    &none 
                                &mt LALT ESC &kp LCTRL &mt LCMD SPACE     &lt NUM TAB    &mt LSHFT BSPC  &lt NAV RET   
-                        >;
-                };
-
-                clm_layer {
-                        bindings = <
-&none  &kp Q        &kp W      &kp F       &kp P      &kp B         &kp J     &kp L      &kp U       &kp Y      &kp SEMI       &none   
-&none  &kp A        &mt LCMD R &mt LSHFT S &lt NUM T  &kp G         &kp M     &lt FNK N  &mt LSHFT E &mt LCMD I &kp O          &none  
-&none  &lt NAV Z    &kp X      &kp C       &kp D      &kp V         &kp K     &kp H      &kp COMMA   &kp DOT    &lt CTR FSLH   &none 
-                               &mt LALT ESC &kp LCTRL &mt LCMD SPACE     &kp TAB    &mt DEL BSPC  &kp RET   
                         >;
                 };
 
