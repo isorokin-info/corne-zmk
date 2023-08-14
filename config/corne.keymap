@@ -34,18 +34,18 @@
 
                 qwe_layer {
                         bindings = <
-&none  &AS(Q)        &AC(W)      &AC(E)       &AC(R)      &AC(T)         &AC(Y)     &AC(U)      &AC(I)       &AC(O)      &AC(P)      &none   
-&none  &AC(A)        &AC(S)      &AC(D)       &AC(F)      &AC(G)         &AC(H)     &AC(J)      &AC(K)       &AC(L)      &AC(SEMI)   &none  
-&none  &AC(Z)        &AC(X)      &AC(C)       &AC(V)      &AC(B)         &AC(N)     &AC(M)      &AC(COMMA)   &AC(DOT)    &AC(FSLH)   &none 
+&none  AS(Q)        AC(W)      AC(E)       AC(R)      AC(T)         AC(Y)     AC(U)      AC(I)       AC(O)      AC(P)      &none   
+&none  AC(A)        AC(S)      AC(D)       AC(F)      AC(G)         AC(H)     AC(J)      AC(K)       AC(L)      AC(SEMI)   &none  
+&none  AC(Z)        AC(X)      AC(C)       AC(V)      AC(B)         AC(N)     AC(M)      AC(COMMA)   AC(DOT)    AC(FSLH)   &none 
                                &mt LALT ESC &kp LCTRL &mt LCMD SPACE     &lt NUM TAB    &mt LSHFT BSPC  &lt NAV RET   
                         >;
                 };
 
                 num_layer {
                         bindings = <
-&none  &kp F1    &kp F2     &kp F3     &kp F4     &kp F5     &AC(N1)    &AC(N2)     &AC(N3)     &AC(N4)     &AC(N5)        &none       
-&none  &kp F6    &kp F7     &kp F8     &kp F9     &kp F10    &AC(N6)    &AC(N7)     &AC(N8)     &AC(N9)     &AC(N0)        &none       
-&none  &kp F11   &kp F12    &kp CAPS   &AC(APOS)  &AC(GRAVE) &AC(BSLH)  &AC(LBKT)   &AC(RBKT)   &AC(MINUS)  &AC(EQUAL)     &none       
+&none  &kp F1    &kp F2     &kp F3     &kp F4     &kp F5     &AC(N1)    AC(N2)     AC(N3)     AC(N4)     AC(N5)        none       
+&none  &kp F6    &kp F7     &kp F8     &kp F9     &kp F10    &AC(N6)    AC(N7)     AC(N8)     AC(N9)     AC(N0)        none       
+&none  &kp F11   &kp F12    &kp CAPS   AC(APOS)   AC(GRAVE)  AC(BSLH)   AC(LBKT)   AC(RBKT)   AC(MINUS)  AC(EQUAL)     none       
                               &trans    &trans     &trans        &trans    &trans     &trans      
                         >;
                 };
