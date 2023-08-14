@@ -8,12 +8,27 @@
 #include <dt-bindings/zmk/bt.h>
 // #include <dt-bindings/zmk/outputs.h>
 
+// Autoshift Macro
+#define AS(keycode) &as LS(keycode) keycode
+
 // Layers
 #define QWE 0
 #define NUM 1
 #define NAV 2
 
 / {
+        behaviors {
+            as: auto_shift {
+                compatible = "zmk,behaviors-hold-tap";
+                label = "AUTO_SHIFT";
+                #binding-cells = <2>;
+                tapping_term_ms = <150>;
+                quick_tap_ms = <0>;
+                flavor = "tap-preffered";
+                bindings = <&kp>, <&kp>;
+            };
+        };
+
         keymap {
                 compatible = "zmk,keymap";
 
