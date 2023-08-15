@@ -16,17 +16,18 @@
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
 / {
-        behaviors {
-            as: auto_shift {
-                compatible = "zmk,behaviors-hold-tap";
-                label = "AUTO_SHIFT";
-                #binding-cells = <2>;
-                tapping_term_ms = <150>;
-                quick_tap_ms = <0>;
-                flavor = "tap-preffered";
-                bindings = <&kp>, <&kp>;
-            };
+    behaviors {
+        as: auto_shift {
+            compatible = "zmk,behavior-hold-tap";
+            label = "AUTO_SHIFT";
+            #binding-cells = <2>;
+            tapping_term_ms = <135>;
+            quick_tap_ms = <0>;
+            flavor = "tap-preferred";
+            bindings = <&kp>, <&kp>;
         };
+    };
+
         keymap {
                 compatible = "zmk,keymap";
                 qwe_layer {
@@ -34,7 +35,7 @@
 &none  AS(Q)        AS(W)      AS(E)       AS(R)      AS(T)         AS(Y)     AS(U)      AS(I)       AS(O)      AS(P)      &none   
 &none  AS(A)        AS(S)      AS(D)       AS(F)      AS(G)         AS(H)     AS(J)      AS(K)       AS(L)      AS(SEMI)   &none  
 &none  AS(Z)        AS(X)      AS(C)       AS(V)      AS(B)         AS(N)     AS(M)      AS(COMMA)   AS(DOT)    AS(FSLH)   &none 
-                               &mt LALT ESC &kp LCTRL &mt LCMD SPACE     &lt NUM TAB    &mt LSHFT BSPC  &lt NAV RET   
+                    &mt LALT ESC  &kp LCTRL   &mt LCMD SPACE     &lt NUM TAB    &mt LSHFT BSPC  &lt NAV RET   
                         >;
                 };
 
