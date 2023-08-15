@@ -28,10 +28,8 @@
                 bindings = <&kp>, <&kp>;
             };
         };
-
         keymap {
                 compatible = "zmk,keymap";
-
                 qwe_layer {
                         bindings = <
 &none  AS(Q)        AS(W)      AS(E)       AS(R)      AS(T)         AS(Y)     AS(U)      AS(I)       AS(O)      AS(P)      &none   
