@@ -45,7 +45,7 @@
                         bindings = <
 &none  &kp F1    &kp F2     &kp F3     &kp F4     &kp F5     AS(N1)    AS(N2)     AS(N3)     AS(N4)     AS(N5)        &none       
 &none  &kp F6    &kp F7     &kp F8     &kp F9     &kp F10    AS(N6)    AS(N7)     AS(N8)     AS(N9)     AS(N0)        &none       
-&none  &kp F11   &kp F12    &kp CAPS   AS(APOS)   AS(GRAVE)  AS(BSLH)  AS(LBKT)   AS(RBKT)   AS(MINUS)  AS(EQUAL)     &none       
+&none  &kp F11   &kp F12    &kp CAPS   AS(APOS)   AS(GRAVE)  AS(BSLH)  AS(MINUS)  AS(LBKT)   AS(RBKT)   AS(EQUAL)     &none       
                               &trans    &trans     &trans        &trans    &trans     &trans      
                         >;
                 };
