@@ -63,8 +63,9 @@
                         bindings = <
 &none  AS(Q)        AS(W)      AS(F)       AS(P)      AS(B)         AS(J)     AS(L)      AS(U)       AS(Y)      AS(SEMI)      &none   
 &none  AS(A)        AS(R)      AS(S)       AS(T)      AS(G)         AS(M)     AS(N)      AS(E)       AS(I)      AS(O)   &none  
-&none  AS(Z)        AS(X)      AS(C)       AS(D)      AS(V)         AS(K)     AS(H)      AS(COMMA)   AS(DOT)    AS(FSLH)   &none 
-                    &mt LSHFT ESC  &kp LCTRL   &mt LCMD SPACE     &lt NUM TAB    &mt LALT BSPC  &lt NAV RET   
+&none  AS(Z)        AS(X)      AS(C)       AS(D)      AS(V)         AS(K)     AS(H)      AS(COMMA)   AS(DOT)    AS(FSLH)   &none
+                              &trans    &trans     &trans        &trans    &trans     &trans      
+#                    &mt LSHFT ESC  &kp LCTRL   &mt LCMD SPACE     &lt NUM TAB    &mt LALT BSPC  &lt NAV RET   
                         >;
                 };
 
