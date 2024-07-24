@@ -10,9 +10,11 @@
 
 // Layers
 #define QWE 0
-#define NUM 1
-#define NAV 2
-#define CLM 3
+#define CLM 1
+#define RUS 2
+#define NUM 3
+#define NAV 4
+
 
 #define AS(keycode) &as LS(keycode) keycode     // Autoshift Macro
 
@@ -41,6 +43,24 @@
                         >;
                 };
 
+                clm_layer {
+                        bindings = <
+&none  AS(Q)        AS(W)      AS(F)       AS(P)      AS(B)         AS(J)     AS(L)      AS(U)       AS(Y)      AS(SEMI)      &none   
+&none  AS(A)        AS(R)      AS(S)       AS(T)      AS(G)         AS(M)     AS(N)      AS(E)       AS(I)      AS(O)   &none  
+&none  AS(Z)        AS(X)      AS(C)       AS(D)      AS(V)         AS(K)     AS(H)      AS(COMMA)   AS(DOT)    AS(FSLH)   &none
+                              &trans    &trans     &trans        &trans    &trans     &trans      
+                        >;
+                };
+
+                rus_layer {
+                        bindings = <
+&none  AS(Й)        AS(Ц)      AS(У)       AS(К)      AS(Е)         AS(Н)     AS(Г)      AS(Ш)       AS(Щ)      AS(З)   &none
+&none  AS(Ф)        AS(Ы)      AS(В)       AS(А)      AS(П)         AS(Р)     AS(О)      AS(Л)       AS(Д)      AS(Ж)   &none
+&none  AS(Я)        AS(Ч)      AS(С)       AS(М)      AS(И)         AS(Т)     AS(Ь)      AS(Б)       AS(Ю)      AS(Х)   &none
+                              &trans    &trans     &lt QWE SPACE        &trans    &trans     &trans      
+                        >;
+                };
+
                 num_layer {
                         bindings = <
 &none  &kp F1    &kp F2     &kp F3     &kp F4     &kp F5     AS(N1)    AS(N2)     AS(N3)     AS(N4)     AS(N5)        &none       
@@ -53,18 +73,9 @@
                 nav_layer {
                         bindings = <
 &none  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4   &kp HOME   &kp PG_DN  &kp PG_UP  &kp END    &kp C_VOL_UP  &none
-&none  &bt BT_CLR    &trans        &trans        &to QWE      &to CLM     &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp C_VOL_DN  &none
-&none  &kp PSCRN     &kp DEL       &trans        &trans        &trans       &kp C_PREV &kp C_PP   &kp C_NEXT &kp C_STOP &kp C_MUTE    &none
+&none  &bt BT_CLR    &trans        &to RUS        &to QWE      &to CLM     &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT  &kp C_VOL_DN  &none
+&none  &kp PSCRN     &kp DEL       &AS(Ё)        &AS(Э)        &AS(Ъ)       &kp C_PREV &kp C_PP   &kp C_NEXT &kp C_STOP &kp C_MUTE    &none
                               &trans    &trans     &trans        &trans     &trans     &trans      
-                        >;
-                };
-
-                clm_layer {
-                        bindings = <
-&none  AS(Q)        AS(W)      AS(F)       AS(P)      AS(B)         AS(J)     AS(L)      AS(U)       AS(Y)      AS(SEMI)      &none   
-&none  AS(A)        AS(R)      AS(S)       AS(T)      AS(G)         AS(M)     AS(N)      AS(E)       AS(I)      AS(O)   &none  
-&none  AS(Z)        AS(X)      AS(C)       AS(D)      AS(V)         AS(K)     AS(H)      AS(COMMA)   AS(DOT)    AS(FSLH)   &none 
-                    &mt LSHFT ESC  &kp LCTRL   &mt LCMD SPACE     &lt NUM TAB    &mt LALT BSPC  &lt NAV RET   
                         >;
                 };
 
